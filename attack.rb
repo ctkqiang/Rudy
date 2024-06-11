@@ -5,7 +5,7 @@ require "tty-prompt"
 # 运行菜单函数
 def 运行菜单
     # 获取用户输入的攻击目标URL
-    puts "请输入您要攻击的URL：\n"
+    puts "请输入您要攻击的URL: "
     url = gets.chomp
   
     # 创建 Rudy::Attack 对象
