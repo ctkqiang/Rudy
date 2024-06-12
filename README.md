@@ -44,6 +44,8 @@ https://www.baidu.com
 2. 列出所有 Cookie 
 
 ```bash
+请输入您要攻击的URL：
+abc.cn
 ===== RUDY 攻击 ======
  列出所有 Cookie
 
