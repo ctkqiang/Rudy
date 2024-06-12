@@ -48,23 +48,23 @@ https://www.baidu.com
 abc.cn
 ===== RUDY 攻击 ======
  列出所有 Cookie
-
+--------------------------------------------------
 | 名称: _abck
-| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 | 域: abc.cn
 | 路径: /
 | 过期时间: 2025-06-13 00:47:24 +0800
 | 安全: true
 --------------------------------------------------
 | 名称: ak_bmsc
-| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 | 域: abc.cn
 | 路径: /
 | 过期时间: 2024-06-13 02:47:24 +0800
 | 安全: false
 --------------------------------------------------
 | 名称: bm_sz
-| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 | 域: abc.cn
 | 路径: /
 | 过期时间: 2024-06-13 04:47:24 +0800
