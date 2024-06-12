@@ -60,6 +60,6 @@ jobs:
         run: gem install bundler && bundle install
 
       - name: Publish Gem
-        run: gem push Rudy-*.gem
+        run: gem push Rudy-0.1.0.gem
         env:
           RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
