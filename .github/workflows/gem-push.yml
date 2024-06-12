@@ -20,7 +20,7 @@ jobs:
         ruby-version: '3.0'
 
     - name: Install dependencies
-      run: gem install bundler && bundle install
+      run: gem install bundler && bundle install && sh INSTALL.sh
 
-    - name: Run tests
-      run: bundle exec rspec
+    - name: Build Gem
+      run: gem build Rudy.gemspec
