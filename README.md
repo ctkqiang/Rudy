@@ -21,6 +21,7 @@ make run
 
 ##### 以下是程序演示的示例，以及输出结果:
 
+1. 列出所有端点
 ```bash
 请输入您要攻击的URL：
 https://www.baidu.com
@@ -40,8 +41,34 @@ https://www.baidu.com
 
 共找到 6 个端点.
 ```
+2. 列出所有 Cookie 
 
+```bash
+===== RUDY 攻击 ======
+ 列出所有 Cookie
 
+| 名称: _abck
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 域: abc.cn
+| 路径: /
+| 过期时间: 2025-06-13 00:47:24 +0800
+| 安全: true
+--------------------------------------------------
+| 名称: ak_bmsc
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 域: abc.cn
+| 路径: /
+| 过期时间: 2024-06-13 02:47:24 +0800
+| 安全: false
+--------------------------------------------------
+| 名称: bm_sz
+| 值: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| 域: abc.cn
+| 路径: /
+| 过期时间: 2024-06-13 04:47:24 +0800
+| 安全: false
+--------------------------------------------------
+```
 
 ### 个人捐赠支持
 如果您认为该项目对您有所帮助，并且愿意个人捐赠以支持其持续发展和维护，🥰我非常感激您的慷慨。

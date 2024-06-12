@@ -39,7 +39,7 @@ def 运行菜单
         # 列出所有本地存储
         # 添加相应代码
     when 菜单项[4]
-        # 列出所有 Cookie
+        # 列出所有 Cookies
         rudy.get_cookies
     end
 end
