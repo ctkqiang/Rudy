@@ -40,7 +40,7 @@ def 运行菜单
         # 添加相应代码
     when 菜单项[4]
         # 列出所有 Cookie
-        # 添加相应代码
+        rudy.get_cookies
     end
 end
 

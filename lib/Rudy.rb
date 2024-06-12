@@ -4,6 +4,7 @@ require "nokogiri"
 require "uri"
 require "terminal-table"
 require "colorize"
+require "mechanize"
 
 module Rudy
   class Attack
@@ -12,6 +13,7 @@ module Rudy
     # 初始化攻击对象，并设置攻击目标URL
     def initialize(url)
         @url = url
+        @agent = Mechanize.new
     end
 
     # 获取目标URL的HTML内容
@@ -45,6 +47,16 @@ module Rudy
         display_endpoints_table(endpoints)
     end
 
+    def get_cookies
+        # 获取页面
+        page = @agent.get(@url)
+
+        # 获取并打印所有 cookies
+        cookies = @agent.cookie_jar.cookies
+
+        display_cookies_table(cookies)
+    end
+
     # 显示端点信息的表格
     def display_endpoints_table(endpoints)
         # 格式化端点数组，并使用绿色显示
@@ -56,6 +68,33 @@ module Rudy
         puts "\n"
         puts table
         puts "\n共找到 #{endpoints.length} 个端点."
+    end
+
+    def display_cookies_table(cookies)
+
+        if cookies.nil?
+            puts "未找到任何 cookie。"
+            return
+        else
+            cookies.each do |cookie|
+                puts "| 名称: #{cookie.name}"
+                puts "| 值: #{cookie.value}"
+                puts "| 域: #{cookie.domain}"
+                puts "| 路径: #{cookie.path}"
+        
+                if cookie.expires  
+                    puts "| 过期时间: #{cookie.expires}"  
+                else  
+                    puts "| 过期时间: 未设置"  
+                end  
+        
+                puts "| 安全: #{cookie.secure?}"
+
+                puts "-" * 50
+            end
+        end
+    
+        puts "\n共找到 #{cookies.length} 个 cookies."
     end
   end
 end
