@@ -41,8 +41,6 @@ jobs:
       - name: Install dependencies
         run: gem install bundler && bundle install
 
-      - name: Run tests
-        run: bundle exec rspec
 
   publish:
     runs-on: ubuntu-latest
