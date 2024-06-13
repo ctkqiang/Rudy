@@ -18,7 +18,15 @@ def 运行菜单
     HEADER
 
     # 菜单选项
-    菜单项 = ["列出所有端点", "查看使用的技术栈", "发动攻击", "列出所有本地存储", "列出所有 Cookie"]
+    菜单项 = [
+        "列出所有端点", 
+        "查看使用的技术栈", 
+        "发动攻击", 
+        "列出所有本地存储", 
+        "列出所有 Cookie", 
+        "列出所有 Headers",
+        "退出"
+    ]
 
     # 提示用户选择菜单项
     选择的项目 = prompt.select(header, 菜单项, cycle: true, per_page: 3)
@@ -41,6 +49,11 @@ def 运行菜单
     when 菜单项[4]
         # 列出所有 Cookies
         rudy.get_cookies
+    when 菜单项[5]
+        # 列出所有 Headers
+        rudy.get_headers
+    else
+        exit(0)
     end
 end
 

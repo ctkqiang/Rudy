@@ -57,6 +57,33 @@ module Rudy
         display_cookies_table(cookies)
     end
 
+    def get_headers
+        page = @agent.get(@url)
+        headers = page.header
+        display_headers_table(headers)
+
+        headers
+    end
+
+    private
+
+    def display_headers_table(headers)
+        if headers.empty?
+            puts "未找到任何头信息。"
+            return
+        end
+
+        puts "头信息列表："
+        
+        headers.each do |key, value|
+            puts "| 名称: #{key.colorize(:green)}"
+            puts "| 值: #{value}"
+            puts "-" * 10
+        end
+        
+        puts "\n共找到 #{headers.length} 个头信息."
+    end
+
     # 显示端点信息的表格
     def display_endpoints_table(endpoints)
         # 格式化端点数组，并使用绿色显示
